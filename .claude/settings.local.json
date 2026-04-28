@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls -la ~/.claude/projects/E--Competition/*.jsonl)",
+      "Bash(awk '{print $5, $9}')",
+      "Bash(python3 -c \" import sys, json for line in sys.stdin: line = line.strip\\(\\) if not line: continue try: obj = json.loads\\(line\\) role = obj.get\\('type',''\\) if role in ['user','assistant']: msg = obj.get\\('message',{}\\) content = msg.get\\('content',''\\) if isinstance\\(content, list\\): for c in content: if isinstance\\(c,dict\\) and c.get\\('type'\\)=='text': print\\(f'[{msg.get\\(\\\\\"role\\\\\",\\\\\"?\\\\\"\\)}]: {c[\\\\\"text\\\\\"][:300]}'\\) break elif isinstance\\(content, str\\): print\\(f'[{msg.get\\(\\\\\"role\\\\\",\\\\\"?\\\\\"\\)}]: {content[:300]}'\\) except: pass \")",
+      "Bash(python3 -c ':*)",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:getdesign.md)",
+      "Bash(npx getdesign@latest add figma)",
+      "Bash(npm run:*)",
+      "Bash(npm list:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir -p tasks/M01/questions)",
+      "Bash(mv \"任务1：人员轮换.mp4\" tasks/M01/video.mp4)",
+      "Bash(npx vite *)"
+    ]
+  }
+}

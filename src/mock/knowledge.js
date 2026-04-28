@@ -1,0 +1,78 @@
+// 知识树数据 — 基于AI素养知识点体系
+// 5个父节点（树的主枝），40个子节点（树的末端叶子/果实）
+// 每个子节点绑定对应的题目ID，答对即可点亮
+
+export const knowledgeTree = [
+  {
+    id: 'p1', name: '感知', emoji: '👁️', color: '#7B61FF', description: '了解机器如何通过传感器感知世界',
+    children: [
+      { id: 'c1', name: '辨认机器感官', desc: '能指出常见设备的摄像头或麦克风', questionIds: [2, 82, 91] },
+      { id: 'c2', name: '人与机器感官', desc: '能简单说出机器与人类感知的不同', questionIds: [14, 25, 42, 73, 96] },
+      { id: 'c3', name: '传感器多样性', desc: '能列举至少三种不同的传感器功能', questionIds: [8, 17, 64, 84] },
+      { id: 'c4', name: '感知工作条件', desc: '知道环境会干扰感知', questionIds: [7, 11, 15, 21, 62, 81] },
+      { id: 'c5', name: '单一信号反应', desc: '能区分机器对声音、光线的单向反应', questionIds: [13, 54] },
+      { id: 'c6', name: '多种信号体验', desc: '同时使用声音和动作与机器互动', questionIds: [21, 43, 60, 90] },
+      { id: 'c7', name: '多感官协作', desc: '能解释设备为何需要同时看和听', questionIds: [67, 76, 88] },
+      { id: 'c8', name: '感知冲突', desc: '能判断视觉和听觉矛盾时机器的反应', questionIds: [76, 88] },
+      { id: 'c9', name: '视觉确认', desc: '能让摄像头成功看见自己', questionIds: [51, 95] },
+      { id: 'c10', name: '感知结果分类', desc: '根据机器感知的特征给结果打标签', questionIds: [31, 46, 71] },
+      { id: 'c11', name: '空间位置感知', desc: '发现机器对物体远近高低的感知', questionIds: [52, 64, 74] }
+    ]
+  },
+  {
+    id: 'p2', name: '表示与推理', emoji: '🧠', color: '#4CC9F0', description: '理解信息如何被表达和逻辑推理',
+    children: [
+      { id: 'c12', name: '特征提取', desc: '根据颜色或形状等特征分类', questionIds: [1, 12, 35, 69] },
+      { id: 'c13', name: '符号替代', desc: '用贴纸或图形代表现实物体', questionIds: [77] },
+      { id: 'c14', name: '数据结构', desc: '用表格等形式记录和组织信息', questionIds: [45, 66] },
+      { id: 'c15', name: '对应关系', desc: '理解屏幕画面代表现实事物', questionIds: [26, 44] },
+      { id: 'c16', name: '模型局限', desc: '意识到机器表示不等同于真实世界', questionIds: [26] },
+      { id: 'c17', name: '因果关系', desc: '理解如果...那么...的逻辑', questionIds: [61] },
+      { id: 'c18', name: '规则遵循', desc: '按照给定指令完成任务', questionIds: [23, 41, 52, 68] },
+      { id: 'c19', name: '复合判断', desc: '处理包含和/或的条件判断', questionIds: [61, 86] },
+      { id: 'c20', name: '异常处理', desc: '思考条件不满足时的应对', questionIds: [79] },
+      { id: 'c21', name: '结果预测', desc: '推测简单机器动作的后果', questionIds: [44, 55, 62] },
+      { id: 'c22', name: '反向溯源', desc: '根据输出推测原因或输入', questionIds: [49] }
+    ]
+  },
+  {
+    id: 'p3', name: '机器学习', emoji: '🤖', color: '#06D6A0', description: '体验机器如何从数据中学习',
+    children: [
+      { id: 'c23', name: '范例分类', desc: '提供同类事物的例子给机器看', questionIds: [17, 27, 31, 46] },
+      { id: 'c24', name: '数据质量', desc: '区分清晰和模糊的范例', questionIds: [31, 57] },
+      { id: 'c25', name: '特征组合', desc: '了解机器通过组合特征识别物体', questionIds: [46, 51] },
+      { id: 'c26', name: '预测趋势', desc: '根据数据规律推测未来', questionIds: [48] },
+      { id: 'c27', name: '算法概念', desc: '初步了解机器的计算规则', questionIds: [70] },
+      { id: 'c28', name: '概率推断', desc: '理解机器给出的是可能性而非绝对', questionIds: [71] }
+    ]
+  },
+  {
+    id: 'p4', name: '人机交互', emoji: '🤝', color: '#FF9F43', description: '学习与AI沟通和协作',
+    children: [
+      { id: 'c29', name: '语音指令', desc: '清晰地向智能设备发出请求', questionIds: [13, 35, 98] },
+      { id: 'c30', name: '语境理解', desc: '了解同一句话在不同场景的含义', questionIds: [98] },
+      { id: 'c31', name: '机器情绪', desc: '根据灯光声音判断机器状态', questionIds: [83] },
+      { id: 'c32', name: '意图推断', desc: '了解机器需要结合行为推断意图', questionIds: [33] },
+      { id: 'c33', name: '情感计算', desc: '知道机器能识别和模拟情感', questionIds: [33, 54] }
+    ]
+  },
+  {
+    id: 'p5', name: '社会影响', emoji: '🌍', color: '#FF6B9D', description: '思考AI对生活和社会的影响',
+    children: [
+      { id: 'c34', name: '技术依赖', desc: '思考没有AI生活会怎样', questionIds: [81] },
+      { id: 'c35', name: '人机分工', desc: '知道哪些事机器做得更好', questionIds: [4, 18, 28, 29, 73, 92] },
+      { id: 'c36', name: '职业变迁', desc: '讨论AI出现后的工作变化', questionIds: [30, 40, 50] },
+      { id: 'c37', name: '人机共处', desc: '表达人与AI共同生活的愿景', questionIds: [10, 30, 40, 60, 80, 100] },
+      { id: 'c38', name: '隐私安全', desc: '知道不能把密码告诉不熟悉的设备', questionIds: [9, 24, 39] },
+      { id: 'c39', name: '数据意识', desc: '了解机器会记住你说过的话', questionIds: [69] },
+      { id: 'c40', name: '责任归属', desc: '讨论AI做错事时由谁负责', questionIds: [20, 38, 56, 65, 89, 97, 99] }
+    ]
+  }
+]
+
+// 默认初始点亮的子节点（每个父节点点亮1个基础节点）
+// 初始状态：没有任何知识点点亮，必须通过答题才能解锁
+export const defaultUnlockedIds = []
+
+// 所有子节点ID列表
+export const allChildIds = knowledgeTree.flatMap(p => p.children.map(c => c.id))
